@@ -16,12 +16,8 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(PlantRepository repository) {
         return args -> {
-            // if (!repository.existsById(Long.valueOf(1))) {
-                log.info("Preloading " + repository.save(new Plant("Lavander")));
-            // }
-            // if (!repository.existsById(Long.valueOf(2))) {
-                log.info("Preloading " + repository.save(new Plant("Rosemary")));
-            // }
+            log.info("Preloading " + repository.save(new Plant("Lavander")));
+            log.info("Preloading " + repository.save(new Plant("Rosemary")));
         };
     }
 }
